@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: repeat(3, min(1000px, calc(100vh/3)));
+    grid-template-areas: 
+        "sidebar top-form"
+        "sidebar middle-form"
+        "sidebar bottom-form";
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-image: url(/images/halie-west-25xggax4bSA-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.logo-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    opacity: .5;
+    min-height: 15%;
+    position: relative;
+    top: 20%;
+    z-index: 0;
+}
+
+.logo {
+    max-width: 20%;
+    height: auto;
+}
+
+.norse {
+    font-family: 'Norse';
+    font-size: 2.5rem;
+    color: white;
+
+}
+
+.top-form {
+    grid-area: top-form;
+    background-color: hsl(0, 0%, 90%);
+    padding: 5rem 2.5rem;
+}
+
+.top-form p {
+    font-size: 1.5em;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.middle-form {
+    grid-area: middle-form;
+}
+
+.middle-form h2 {
+    text-align: center;
+    padding: 1rem;
+}
+
+form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+    gap: 2rem 1rem;
+}
+
+fieldset {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    width: 10vw;
+}
+
+input {
+    height: 2rem;
+    width: 100%;
+}
+
+.bottom-form {
+    grid-area: bottom-form;
+    background-color: hsl(0, 0%, 90%);
+}
+
+@media only screen and (max-width < 600px) {
+
+}
